@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+
+body {
+	background-color: #fff;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+}
+header {
+    height: 8vh;
+}
+footer {
+    height: 2vh;
+}
+p {
+    margin-bottom: 0;
+}
+a { 
+	color: #000;
+	background-color: transparent;
+	font-weight: normal;
+}
+ul {
+    margin-bottom: 0;
+}
+header .header_logo {
+    font-size: 30px;
+    line-height: 8vh;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+header .account {
+    position: absolute;
+    top: 0px;
+    right: 3vw;
+    z-index: 99999;
+}
+header .account span {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+    margin-top: 3px;
+}
+header nav {
+    display: flex;
+    flex-direction: row;
+}
+header nav .search_form {
+    margin: auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+header nav .search_form .search_input {
+    border: 1px solid #333;
+    padding: 15px;
+    width: 72%;
+}
+header nav .search_form .search_btn {
+    border: 1px solid #333;
+    padding: 15px;
+    width: 25%;
+}
+.account_drop {
+    display: none;
+    position: absolute;
+    top: 8vh;
+    right: 3vw;
+    z-index: 99999;
+    text-align: right;
+    border: 1px solid #333;
+    background-color: rgba(0,0,0,0.7);
+}
+.account_drop.show {
+    display: block;
+}
+.account_drop ul {
+    padding: 30px;
+}
+.account_drop ul li {
+    height: 60px;
+    width: 150px;
+    cursor: pointer;
+}
+.account_drop ul li a {
+    display: block;
+    height: 60px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 50px;
+    color: #ffffff;
+}
+.account_drop ul li:hover a {
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: underline;
+} 
+
+
+
+#body-wrapper {
+    display: flex;
+    
+}
+#body_left {
+    height: 90vh;
+    background-color: #bbb;
+    margin-left: 0;
+}
+#body_left ul {
+    padding: 100px 0;
+}
+#body_left ul li {
+    display: block;
+    padding: 25px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#body_left ul li.active {
+    background-color: aquamarine;
+}
+
+#body_middle {
+    height: 90vh;
+    background-color: #e3e3e3;
+}
+#body_middle .new_post {
+    display: block;
+    font-size: 14px;
+    background-color: orange;
+}
+#body_middle .new_post a {
+    display: block;
+    padding: 20px;
+}
+#body_middle div h5 {
+    display: block;
+    padding: 20px;
+    background-color: #777;
+    color: #fff;
+    margin-bottom: 0;
+}
+#body_middle ul li {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #888;
+}
+
+#body_right {
+    height: 90vh;
+    background-color: aliceblue;
+}
+#body_right .board_intro {
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+}
+#body_right .board_intro h3 {
+    padding: 10px 0;
+}
+#body_right .board_image {
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+}
+
+#body_post {
+    height: 90vh;
+    background-color: pink;
+    overflow: scroll;
+}
+#body_post .post_wrapper {
+    margin: 30px 50px;
+    height: 90vh;
+}
+#body_post .post_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#body_post .post_title span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    margin-right: 20px;
+}
+#body_post .post_user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+#body_post .post_user .post_owner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#body_post .post_user .post_owner span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+#body_post .post_user .post_owner p {
+    line-height: 30px;
+}
+#body_post .post_user .post_edit button {
+    margin-left: 10px;
+    background-color: transparent;
+    text-decoration: underline;
+}
+#body_post .post_content {
+    border: 1px solid #333;
+    padding: 10px;
+    min-height: 400px;
+}
+#body_post .post_options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+#body_post .post_options .post_like {
+    display: flex;
+    flex-direction: row;
+}
+#body_post .post_options span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+#body_post .post_comment .post_comment_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 0;
+}
+#body_post .post_comment .post_comment_form input {
+    border: 1px solid #333;
+    height: 80px;
+    overflow: scroll;
+    width: 77%;
+    margin-right: 3%;
+    padding: 20px;
+}
+#body_post .post_comment .post_comment_form button {
+    width: 20%;
+    padding: 10px 0;
+    min-width: 100px;
+}
+#body_post .post_comment .comment_list {
+    padding: 20px 0;
+}
+#body_post .post_comment .comment_list ul li {
+    margin-bottom: 50px;
+}
+#body_post .post_comment .comment_list ul li .comment_user {
+    display: flex;
+}
+#body_post .post_comment .comment_list ul li .comment_user span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+
+#body_middle_account {
+    padding: 100px 0;
+}
+#body_middle_account div {
+    display: block;
+    padding: 25px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#body_middle_account div.active {
+    background-color: yellow;
+}
+
+#body_right_questions, #body_right_bookmark {
+    height: 90vh;
+    background-color: aliceblue;
+    overflow: scroll;
+}
+#body_right_questions .q_intro, #body_right_bookmark .b_intro {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    background-color: #ddd;
+}
+#body_right_questions .qlist, #body_right_bookmark .blist {
+    padding: 50px 70px;
+}
+#body_right_questions .qlist .qlist_item_wrapper, 
+#body_right_bookmark .blist .blist_item_wrapper {
+    border-bottom: 1px solid #333;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#body_right_questions .qlist .qlist_item_wrapper p,
+#body_right_bookmark .blist .blist_item_wrapper p {
+    line-height: 80px;
+    font-size: 16px;
+}
+#body_right_questions .qlist .qlist_item_wrapper span, 
+#body_right_bookmark .blist .blist_item_wrapper span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+}
+
+#account .change_pwd, #account .change_phone {
+    display: none;
+}
+#account .change_pwd.show, #account .change_phone.show {
+    display: block;
+}
+
+/* #forgot_pwd .enter_code, #forgot_pwd .enter_pwd {
+    display: none;
+}
+#forgot_pwd .enter_code.show, #forgot_pwd .enter_pwd.show {
+    display: block;
+} */
